@@ -11,3 +11,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hero {
+  background-image: url("../public/image/hero.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: bottom;
+  height: 650px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}

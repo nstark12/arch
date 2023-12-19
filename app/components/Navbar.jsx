@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -30,25 +31,8 @@ const Navbar = () => {
         </div>
       </header>
       <nav className="bg-primary text-white py-2 md:block hidden">
-        <ul className="flex justify-center md:gap-10 lg:gap-24 xl:gap-32">
-          <Link className="hover:text-gray-300" href={"/"}>
-            Resources
-          </Link>
-          <Link className="hover:text-gray-300" href={"/"}>
-            Events
-          </Link>
-          <Link className="hover:text-gray-300" href={"/"}>
-            Presentations
-          </Link>
-          <Link className="hover:text-gray-300" href={"/"}>
-            Prevention
-          </Link>
-          <Link className="hover:text-gray-300" href={"/"}>
-            Employment
-          </Link>
-          <Link className="hover:text-gray-300" href={"/"}>
-            Testimonials
-          </Link>
+        <ul className="flex justify-center md:gap-10 lg:gap-20 lg:text-lg xl:gap-32 2xl:gap-44">
+          <NavLinks />
         </ul>
       </nav>
     </div>

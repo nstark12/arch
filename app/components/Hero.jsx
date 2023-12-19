@@ -8,12 +8,21 @@ const Hero = () => {
         Where Abilities &amp; Disabilities Become Possibilities
       </h4>
       <div className="mt-12">
-        <button className="bg-secondary text-white py-2 px-6 rounded-full mr-4 md:text-2xl hover:bg-secondaryHov cursor-pointer">
-          Contact Us
-        </button>
-        <button className="bg-primary text-white py-2 px-6 rounded-full md:text-2xl hover:bg-primaryHov cursor-pointer">
-          Donate
-        </button>
+        <Link href={"/"}>
+          <button className="bg-secondary text-white py-2 px-6 rounded-full mr-4 md:text-2xl hover:bg-secondaryHov cursor-pointer">
+            Contact Us
+          </button>
+        </Link>
+        <a
+          target="_blank"
+          href={
+            "https://archchangeslives.networkforgood.com/projects/128949-every-day-giving"
+          }
+        >
+          <button className="bg-primary text-white py-2 px-6 rounded-full md:text-2xl hover:bg-primaryHov cursor-pointer">
+            Donate
+          </button>
+        </a>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Mission = () => {
   return (
-    <section>
+    <section className="mx-4 md:mx-2">
       <div className="-mt-14 grid md:grid-cols-2">
         <div className="bg-primary rounded-lg text-white p-4">
           <h1 className="md:text-5xl text-3xl font-semibold mb-8 px-2">

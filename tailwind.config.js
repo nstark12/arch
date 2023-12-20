@@ -12,6 +12,7 @@ module.exports = {
         secondary: "#76be43",
         primaryHov: "#005e8a",
         secondaryHov: "#568832",
+        primaryLight: "#39b4ed",
       },
     },
   },

@@ -22,7 +22,8 @@ body {
 }
 
 .footer-head {
-  @apply text-lg border-b-2 mr-56 border-secondary mb-4;
+  @apply text-lg border-b-2 mr-24  border-secondary mb-4;
+  @apply md:mt-2 mt-10;
 }
 
 .footer-li {

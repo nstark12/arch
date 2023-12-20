@@ -31,7 +31,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="m-4 hidden md:flex">
-          <Link href={"/"}>
+          <Link href={"/contact"}>
             <button className="bg-secondary text-white py-2 px-4 rounded-full mr-4 md:text-lg hover:bg-secondaryHov cursor-pointer">
               Contact Us
             </button>

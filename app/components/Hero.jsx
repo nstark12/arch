@@ -8,8 +8,8 @@ const Hero = () => {
         Where Abilities &amp; Disabilities Become Possibilities
       </h4>
       <div className="mt-12">
-        <Link href={"/"}>
-          <button className="bg-secondary text-white py-2 px-6 rounded-full mr-4 md:text-2xl hover:bg-secondaryHov cursor-pointer">
+        <Link href={"/contact"}>
+          <button className="bg-secondary text-white py-2 px-6 rounded-full mr-4 md:text-2xl hover:bg-secondaryHov cursor-pointer border border-white">
             Contact Us
           </button>
         </Link>
@@ -19,7 +19,7 @@ const Hero = () => {
             "https://archchangeslives.networkforgood.com/projects/128949-every-day-giving"
           }
         >
-          <button className="bg-primary text-white py-2 px-6 rounded-full md:text-2xl hover:bg-primaryHov cursor-pointer">
+          <button className="bg-primary text-white py-2 px-6 rounded-full md:text-2xl hover:bg-primaryHov cursor-pointer border border-white">
             Donate
           </button>
         </a>

@@ -21,6 +21,14 @@ body {
   height: 650px;
 }
 
+.footer-head {
+  @apply text-lg border-b-2 mr-56 border-secondary mb-4;
+}
+
+.footer-li {
+  @apply my-1;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 400px;

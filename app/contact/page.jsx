@@ -1,5 +1,11 @@
+import ContactForm from "../components/ContactForm";
+
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <div className="container mx-auto">
+      <ContactForm />
+    </div>
+  );
 };
 
 export default ContactPage;

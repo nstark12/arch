@@ -13,17 +13,41 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
     },
-    created() {
-      setLoaded(true);
-    },
-  });
+    [
+      (slider) => {
+        let timeout;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 4500);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
 
   function Arrow(props) {
     const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -53,56 +77,17 @@ const Carousel = () => {
           {images.map((src, idx) => (
             <div key={idx} className="keen-slider__slide">
               <div className="slider-img">
-                <img src={src} />
+                <Image
+                  alt="teen time image"
+                  width={600}
+                  height={600}
+                  src={src}
+                />
               </div>
             </div>
           ))}
-
-          {/* <div className="keen-slider__slide number-slide1">1</div>
-          <div className="keen-slider__slide number-slide2">2</div>
-          <div className="keen-slider__slide number-slide3">3</div>
-          <div className="keen-slider__slide number-slide4">4</div>
-          <div className="keen-slider__slide number-slide5">5</div> */}
         </div>
-        {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
-          </>
-        )}
       </div>
-      {loaded && instanceRef.current && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            );
-          })}
-        </div>
-      )}
     </>
   );
 };

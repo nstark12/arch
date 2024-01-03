@@ -57,7 +57,33 @@ const ContactForm = () => {
               name="email"
               required
               placeholder="Your email"
-              className="border border-primary placeholder-[#9CA2A9] text-gray-100 text-sm rounded-full block w-full p-2.5"
+              className="border border-primary placeholder-[#9CA2A9] text-gray-600 text-sm rounded-full block w-full p-2.5"
+            />
+          </div>
+          <div>
+            <label htmlFor="name" className="block mb-2 text-sm font-medium">
+              Your Name
+            </label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              required
+              placeholder="Your name"
+              className="border border-primary placeholder-[#9CA2A9] text-gray-600 text-sm rounded-full block w-full p-2.5"
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className="block mb-2 text-sm font-medium">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Your phone"
+              className="border border-primary placeholder-[#9CA2A9] text-gray-600 text-sm rounded-full block w-full p-2.5"
             />
           </div>
           <div>
@@ -70,7 +96,7 @@ const ContactForm = () => {
               name="subject"
               required
               placeholder="Your subject"
-              className="border border-primary placeholder-[#9CA2A9] text-gray-100 text-sm rounded-full block w-full p-2.5"
+              className="border border-primary placeholder-[#9CA2A9] text-gray-600 text-sm rounded-full block w-full p-2.5"
             />
           </div>
           <div>
@@ -85,7 +111,7 @@ const ContactForm = () => {
               name="message"
               required
               placeholder="Let's talk about..."
-              className="border border-primary placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="border border-primary placeholder-[#9CA2A9] text-gray-600 text-sm rounded-lg block w-full p-2.5"
             />
           </div>
           <button

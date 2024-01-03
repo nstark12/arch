@@ -28,7 +28,7 @@ const Carousel = () => {
           if (mouseOver) return;
           timeout = setTimeout(() => {
             slider.next();
-          }, 4000);
+          }, 3500);
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {

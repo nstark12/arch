@@ -18,6 +18,7 @@ const Impact = () => {
             description={
               "An outdoor summer goal-focused program featuring music gardening, hiking, fitness, crafts, games, and more. Open to individuals ages six and up who have disabilities."
             }
+            link={"/gains"}
           />
           <ImpactTile
             title={"Teen Time"}
@@ -25,6 +26,7 @@ const Impact = () => {
             description={
               "Teens with and without disabilities come together to do community service and build social skills through sports, cooking, games and crafts. "
             }
+            link={"/teen-time"}
           />
           <ImpactTile
             title={"ARCh Youth Team"}
@@ -32,6 +34,7 @@ const Impact = () => {
             description={
               "A unique group of teens from different schools whose goal is to replace bullying with respect. We do this by performing skits, songs, and personal stories for people of all ages. Everyone has the opportunity to act, sing, or even dance. "
             }
+            link={"/youth-team"}
           />
         </div>
       </div>

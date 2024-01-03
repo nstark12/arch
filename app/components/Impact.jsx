@@ -3,7 +3,7 @@ import ImpactTile from "./ImpactTile";
 const Impact = () => {
   return (
     <section className="mx-4 md:mx-0">
-      <div className="mt-12">
+      <div className="mt-12 mx-4">
         <h1 className="text-6xl text-primary font-semibold mb-6">What We Do</h1>
         <div className="grid md:grid-cols-2">
           <p className="text-lg">
@@ -30,7 +30,7 @@ const Impact = () => {
             title={"ARCh Youth Team"}
             src={"/image/tile3.jpg"}
             description={
-              "The ARCh Youth Team is a unique group of teens from different schools whose goal is to replace bullying with respect. We do this by performing skits, songs, and personal stories for people of all ages. Everyone has the opportunity to act, sing, or even dance. "
+              "A unique group of teens from different schools whose goal is to replace bullying with respect. We do this by performing skits, songs, and personal stories for people of all ages. Everyone has the opportunity to act, sing, or even dance. "
             }
           />
         </div>

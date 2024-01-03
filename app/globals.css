@@ -21,6 +21,11 @@ body {
   height: 650px;
 }
 
+iframe {
+  width: 700px;
+  height: 500px;
+}
+
 .footer-head {
   @apply text-lg border-b-2 mr-24  border-secondary mb-4;
   @apply md:mt-2 mt-10;
@@ -33,5 +38,17 @@ body {
 @media (max-width: 768px) {
   .hero {
     height: 400px;
+  }
+
+  iframe {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    width: 350px;
+    height: 175px;
   }
 }

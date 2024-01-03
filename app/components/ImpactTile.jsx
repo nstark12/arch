@@ -17,7 +17,7 @@ const ImpactTile = ({ title, src, description }) => {
         </div>
         <div className="p-6 ">
           <h1 className="text-2xl mb-4">{title}</h1>
-          <p>{description}</p>
+          <p className="leading-7">{description}</p>
           <div className="mt-6">
             <Link href={"/about"}>
               <button className="bg-primary text-white py-2 px-4 rounded-full mr-4 md:text-lg hover:bg-primaryHov cursor-pointer border border-white flex items-center">

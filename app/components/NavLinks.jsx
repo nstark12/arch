@@ -28,8 +28,8 @@ const eventLinks = [
     path: "/gains",
   },
   {
-    title: "Teen Times",
-    path: "/teen-times",
+    title: "Teen Time",
+    path: "/teen-time",
   },
   {
     title: "Youth Team",

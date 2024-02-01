@@ -1,5 +1,13 @@
 import Carousel from "../components/Carousel";
 
+const images = [
+  "/image/teen-time-candyland.jpg",
+  "/image/teen-time-candyland.jpg",
+  "/image/teen-time-candyland.jpg",
+  "/image/teen-time-candyland.jpg",
+  "/image/teen-time-candyland.jpg",
+];
+
 const page = () => {
   return (
     <>
@@ -7,7 +15,7 @@ const page = () => {
         <h1 className="text-6xl text-primary font-semibold">Teen Time</h1>
         <h3 className="text-2xl mt-2">Respect, Friendship, &amp; Inclusion</h3>
       </div>
-      <Carousel />
+      <Carousel images={images} />
       <section className="container mx-auto">
         <div className="flex flex-col justify-center items-center mx-4 mb-12">
           <h2 className="text-5xl text-primary mt-10 font-semibold">

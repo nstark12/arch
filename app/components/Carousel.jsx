@@ -3,15 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
 
-const images = [
-  "/image/teen-time-candyland.jpg",
-  "/image/teen-time-candyland.jpg",
-  "/image/teen-time-candyland.jpg",
-  "/image/teen-time-candyland.jpg",
-  "/image/teen-time-candyland.jpg",
-];
-
-const Carousel = () => {
+const Carousel = (props) => {
+  const { images } = props;
   const [sliderRef] = useKeenSlider(
     {
       loop: true,

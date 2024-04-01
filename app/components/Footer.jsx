@@ -20,9 +20,6 @@ const Footer = () => {
           <Link href={"/"} className="footer-li">
             Employment
           </Link>
-          <Link href={"/"} className="footer-li">
-            Testimonials
-          </Link>
           <div className="flex gap-2 items-center mt-2">
             <a
               href={"https://www.facebook.com/ARChchangeslives/"}

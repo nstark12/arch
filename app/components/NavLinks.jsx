@@ -17,7 +17,7 @@ const programsLinks = [
     path: "/strong-girls",
   },
   {
-    title: "Upcoming Envets",
+    title: "Upcoming Events",
     path: "/upcoming-events",
   },
 ];
@@ -73,16 +73,16 @@ const eventLinks = [
 
 const resourcesLinks = [
   {
-    title: "Support our Events",
-    path: "/support-us",
+    title: "ADRC (Aging Disability Right)",
+    path: "https://www.dhs.wisconsin.gov/adrc/index.htm",
   },
   {
-    title: "Upcoming Events",
-    path: "/upcoming-events",
+    title: "DRW (Disability Rights WI)",
+    path: "https://disabilityrightswi.org/",
   },
   {
-    title: "Past Events",
-    path: "/past-events",
+    title: "DPI (Dept. of Public Instruction)",
+    path: "https://dpi.wi.gov/",
   },
 ];
 
@@ -143,7 +143,7 @@ const NavLinks = () => {
         className="w-full text-center md:w-auto md:text-left"
       >
         <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
-          Caregivers
+          Caregiver Support
         </button>
         <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
           {linkName === "caregivers" &&

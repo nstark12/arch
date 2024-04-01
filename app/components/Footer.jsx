@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="bg-primaryHov p-4 text-center text-white">
-        &copy; 2023 by ARCh, All Rights Reserved{" "}
+        &copy; 2024 by ARCh, All Rights Reserved{" "}
       </div>
     </>
   );

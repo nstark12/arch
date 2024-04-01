@@ -3,26 +3,7 @@ import Link from "next/link";
 import DropdownMenu from "./DropdownMenu";
 import { useState } from "react";
 
-const resourceLinks = [
-  {
-    title: "Personal Future Plans",
-    path: "/personal-future-plans",
-  },
-  {
-    title: "ARCh Life Needs Trust",
-    path: "/life-needs-trust",
-  },
-  {
-    title: "Transition Resources",
-    path: "/transition-resources",
-  },
-  {
-    title: "I.E.P.s",
-    path: "/ieps",
-  },
-];
-
-const eventLinks = [
+const programsLinks = [
   {
     title: "GAINS",
     path: "/gains",
@@ -32,42 +13,76 @@ const eventLinks = [
     path: "/teen-time",
   },
   {
-    title: "Youth Team",
-    path: "/youth-team",
+    title: "Strong Girls",
+    path: "/strong-girls",
+  },
+  {
+    title: "Upcoming Envets",
+    path: "/upcoming-events",
   },
 ];
 
-const presLinks = [
+const caregiverLinks = [
   {
-    title: "Stop Bullying",
-    path: "/stop-bullying",
+    title: "IEP Advocacy",
+    path: "/iep-advocacy",
   },
+  {
+    title: "Advocacy for Adults",
+    path: "/adult-advocacy",
+  },
+  {
+    title: "ARCh Life Needs Trust",
+    path: "/life-needs-trust",
+  },
+  {
+    title: "Personal Futures Plan",
+    path: "/personal-futures/plan",
+  },
+  {
+    title: "Transition Resources",
+    path: "/transition-resources",
+  },
+];
+
+const communityLinks = [
   {
     title: "Youth Team",
     path: "/youth-team",
   },
+  {
+    title: "Presentations",
+    path: "/presentations",
+  },
 ];
 
-const prevLinks = [
+const eventLinks = [
   {
-    title: "Child Safety",
-    path: "/child-safety",
+    title: "Support our Events",
+    path: "/support-us",
   },
   {
-    title: "Shaken Baby Syndrome",
-    path: "/shaken-baby-syndrome",
+    title: "Upcoming Events",
+    path: "/upcoming-events",
   },
   {
-    title: "Early Childhood Brain Development",
-    path: "/brain-development",
+    title: "Past Events",
+    path: "/past-events",
+  },
+];
+
+const resourcesLinks = [
+  {
+    title: "Support our Events",
+    path: "/support-us",
   },
   {
-    title: "Fetal Alcohol Syndrome",
-    path: "/fetal-alcohol-syndrome",
+    title: "Upcoming Events",
+    path: "/upcoming-events",
   },
   {
-    title: "Lead Poisoning",
-    path: "/lead-poisoning",
+    title: "Past Events",
+    path: "/past-events",
   },
 ];
 
@@ -79,19 +94,23 @@ const NavLinks = () => {
   };
 
   const handleResourcesHover = () => {
-    setLinkName("resources");
+    setLinkName("programs");
   };
 
   const handleEventsHover = () => {
-    setLinkName("events");
+    setLinkName("caregivers");
   };
 
   const handlePresHover = () => {
-    setLinkName("presentations");
+    setLinkName("community");
   };
 
   const handlePrevHover = () => {
-    setLinkName("prevention");
+    setLinkName("events");
+  };
+
+  const handleResourceHover = () => {
+    setLinkName("resources");
   };
 
   return (
@@ -102,11 +121,11 @@ const NavLinks = () => {
         className="w-full text-center md:w-auto md:text-left"
       >
         <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
-          Resources
+          Programs
         </button>
         <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
-          {linkName === "resources" &&
-            resourceLinks.map((link, index) => (
+          {linkName === "programs" &&
+            programsLinks.map((link, index) => (
               <div
                 key={index}
                 className="py-2 px-4 rounded-lg hover:bg-secondaryHov md:hover:bg-primaryHov my-2 cursor-pointer"
@@ -120,6 +139,50 @@ const NavLinks = () => {
       </div>
       <div
         onMouseEnter={handleEventsHover}
+        onMouseLeave={handleMouseLeave}
+        className="w-full text-center md:w-auto md:text-left"
+      >
+        <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
+          Caregivers
+        </button>
+        <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
+          {linkName === "caregivers" &&
+            caregiverLinks.map((link, index) => (
+              <div
+                key={index}
+                className="py-2 px-4 rounded-lg hover:bg-secondaryHov md:hover:bg-primaryHov my-2 cursor-pointer"
+              >
+                <li key={index}>
+                  <DropdownMenu href={link.path} title={link.title} />
+                </li>
+              </div>
+            ))}
+        </div>
+      </div>
+      <div
+        onMouseEnter={handlePresHover}
+        onMouseLeave={handleMouseLeave}
+        className="w-full text-center md:w-auto md:text-left"
+      >
+        <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
+          Community
+        </button>
+        <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
+          {linkName === "community" &&
+            communityLinks.map((link, index) => (
+              <div
+                key={index}
+                className="py-2 px-4 rounded-lg hover:bg-secondaryHov md:hover:bg-primaryHov my-2 cursor-pointer"
+              >
+                <li key={index}>
+                  <DropdownMenu href={link.path} title={link.title} />
+                </li>
+              </div>
+            ))}
+        </div>
+      </div>
+      <div
+        onMouseEnter={handlePrevHover}
         onMouseLeave={handleMouseLeave}
         className="w-full text-center md:w-auto md:text-left"
       >
@@ -141,38 +204,16 @@ const NavLinks = () => {
         </div>
       </div>
       <div
-        onMouseEnter={handlePresHover}
+        onMouseEnter={handleResourceHover}
         onMouseLeave={handleMouseLeave}
         className="w-full text-center md:w-auto md:text-left"
       >
         <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
-          Presentations
+          Resources
         </button>
         <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
-          {linkName === "presentations" &&
-            presLinks.map((link, index) => (
-              <div
-                key={index}
-                className="py-2 px-4 rounded-lg hover:bg-secondaryHov md:hover:bg-primaryHov my-2 cursor-pointer"
-              >
-                <li key={index}>
-                  <DropdownMenu href={link.path} title={link.title} />
-                </li>
-              </div>
-            ))}
-        </div>
-      </div>
-      <div
-        onMouseEnter={handlePrevHover}
-        onMouseLeave={handleMouseLeave}
-        className="w-full text-center md:w-auto md:text-left"
-      >
-        <button className="py-2 px-4 rounded-lg hover:bg-primaryHov">
-          Prevention
-        </button>
-        <div className="md:absolute md:text-left text-center bg-secondary md:bg-primary rounded-lg m-2 md:m-0">
-          {linkName === "prevention" &&
-            prevLinks.map((link, index) => (
+          {linkName === "resources" &&
+            resourcesLinks.map((link, index) => (
               <div
                 key={index}
                 className="py-2 px-4 rounded-lg hover:bg-secondaryHov md:hover:bg-primaryHov my-2 cursor-pointer"
@@ -186,9 +227,6 @@ const NavLinks = () => {
       </div>
       <Link className="py-2 px-4 rounded-lg hover:bg-primaryHov" href={"/"}>
         Employment
-      </Link>
-      <Link className="py-2 px-4 rounded-lg hover:bg-primaryHov" href={"/"}>
-        Testimonials
       </Link>
     </>
   );
